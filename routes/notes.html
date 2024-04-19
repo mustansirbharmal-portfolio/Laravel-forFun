@@ -61,3 +61,42 @@ Route::view('/','home');
 IMP IMP: Actually, see our website execution starts from web.php file  in LARAVEL because first it sees if its is a home page than it reloads the
          content of home page.
 
+
+    // GIT COMMANDS
+
+1) git init = This command is used to initialize the git
+2) git add . = This command means add all the files and folders of Laravel folder into the git
+3) git commit -m "Let's begin" = This command is used for commit and -m stands for messsge which is used to pass message "Let's begin".
+4) Now open another Terminal
+5) Now we will connect our github account to build repository there from here.
+
+// Commands to create a new repository on the command line
+echo "# Laravel-forFun" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/mustansirbharmal-portfolio/Laravel-forFun.git
+git push -u origin main
+
+// Commands which I don't understand
+1) git branch -M main: 
+-> This command renames the default branch from master to main. 
+-> This is a common practice to use more inclusive terminology in software development.
+-> Basically, this command is used to change from master to main directory
+
+
+2) git remote add origin https://github.com/mustansirbharmal-portfolio/Laravel-forFun.git:
+
+-> This command sets up a remote repository named origin and associates it with the 
+   URL https://github.com/mustansirbharmal-portfolio/Laravel-forFun.git. 
+
+-> This URL typically points to the repository on GitHub.
+
+3) git push -u origin main:
+-> This command pushes the committed changes from the local main branch to the remote repository (origin) on GitHub.
+-> The -u flag sets up tracking, so in the future, you can simply use git push without specifying the branch and remote. 
+-> This is the first push to the repository after setup.
+
+NOTE: -u is used for tracking, and because of this in future if you want to add more file or folders to your folder
+      you don't need to write remote and origin, you just need to write "git push".
