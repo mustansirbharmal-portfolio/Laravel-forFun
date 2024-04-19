@@ -1,0 +1,63 @@
+// NOTES OF LARAVEL
+
+INSTALLATION AND CREATING PROCCES OF CREATING LARAVEL PROJECT
+
+STEP 1 = Install PHP from php.net
+STEP 2 = Store PHP in Program Files
+STEP 3 = Install Composer  and pass the location path Installed PHP i.e C:\Program Files\php-8.3.6
+STEP 4 = Open Command Prompt 
+STEP 5 = Now write "composer" as command
+STEP 6 = Create first project by writing -> composer create-project laravel/laravel Laravel
+STEP 7 = Now you will get "Failed to Download Error" go to php.ini file and uncomment zip and fileinfo
+STEP 8 = Create New project in the same way -> composer create-project laravel/laravel LARAVEL, now your project folder is created successfully
+STEP 9 = This will create Folder in Users/HP by default
+STEP 10 = Locate the folder to htdocs.
+
+// NOTES
+COMPOSER = Composer is an package library of LARAVEL, composer is just like our NodeJS NPM. We can different types of packages using Composer
+
+// BASIC COMMANDS IN LARAVEL
+STEP 1 = Open VS Code and open project folder
+STEP 2 = Open Terminal and run the command "php artisan serve"
+STEP 3 = After running this command you will get an Localhost URL if you open it in browser then you will SEE YOUR FIRST LARAVEL APPLICATION
+
+php artisan serve = The Laravel PHP artisan serve command helps running applications on the PHP development server. 
+                     As a developer, you can use Laravel artisan serve to develop and test various functions within the application.
+
+// NOTE THAT you can also rename the file name of artisan to any file suppose to rename it to Mustansir then when you run
+   artisan command then it would be like: php Mustansir serve, you are still able to access your page. Because code is main not the file name.
+
+// When you redirect to your First Laravel Site, one question arise in your mind that where is the code of this LARAVEL site, so it
+   is basically in welcome.blade.php file. How I know this thing, so press Ctrl+Shift+F to search the content, copy any content from
+   your website and paste it there, now you will find that this content is coming from  welcome.blade.php file which is in the view folder.
+
+// So now question arise that how this page is render in my LARAVEL Site. To answer again press Ctrl+Shift+F and copy some 
+   content of your website and paste it you will find "web.php". 
+
+// "web.php" is the actual file because of which welcome.blade.php page is displaying
+
+// ROUTES IN LARAVEL -> web.php
+
+// 1st WAY
+/* 
+Route::view('/', function () {
+    return view('wel');
+});                                 */
+
+// 2nd way
+Route::view('/','home');
+
+
+
+-> Here, '/' means home page and I am saying that reload wel page as your website home page
+-> Here, I am returning wel as home page through  return view('wel');.
+-> view is global function in LARAVEL. Basically, to make our site different views we use view.
+-> All views are stored in resources/views directory. 
+-> 2nd way is more easier than 1st way.
+-> Views in Laravel are implemented as Blade templates.
+-> Blade is a templating engine that provides a simple syntax for creating reusable templates.
+-> Blade templates are most prominently stored in the resources/views directory and also have a . blade
+
+IMP IMP: Actually, see our website execution starts from web.php file  in LARAVEL because first it sees if its is a home page than it reloads the
+         content of home page.
+
